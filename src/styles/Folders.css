@@ -1,0 +1,44 @@
+/* src/styles/Folders.css */
+/* Folder Card Styling */
+.folder-card {
+    background-color: #f3eac2;
+    border: 1px solid #d1b84e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.folder-card:hover {
+    transform: scale(1.05);
+}
+
+.folder-icon {
+    background-color: #f1c40f;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.folder-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: #f39c12;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.folder-name {
+    font-weight: bold;
+    color: #333;
+}
