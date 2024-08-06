@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const authRoute = require('./routes/authRoute'); // Ensure this path is correct
-const DocumentBase=require('/routes/DocumentBase')
+const DocumentBaseRoute = require('./routes/documentBases');
+const userRoutes = require('./routes/users');
+app.use('/api', userRoutes);
 
 
 const app = express();
@@ -17,11 +19,11 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Apply CORS middleware with options
 
 // Middleware
-app.use(bodyParser.json());s
+app.use(bodyParser.json());
 
 // Routes
 app.use('/api/auth', authRoute);
-app.use('/api/document-bases', DocumentBase)
+app.use('/api/document-bases', DocumentBaseRoute)
 
 
 // MongoDB Atlas connection URI

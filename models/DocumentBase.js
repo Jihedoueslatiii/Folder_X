@@ -10,11 +10,6 @@ const documentBaseSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Folder',
     }],
-    createdBy: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
-    },
 }, { timestamps: true });
 
 module.exports = mongoose.model('DocumentBase', documentBaseSchema);
